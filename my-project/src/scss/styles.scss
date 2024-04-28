@@ -9,12 +9,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
 }
 
 body {
-  min-height: 100vh;
-
-  background: url("../img/homeBackground.jpg") no-repeat center center/cover;
+  background-color: #222;
+  //background: url("../img/homeBackground.jpg") no-repeat center center/cover;
 }
 
+main {
+  margin: 5% auto;
+}
+
+#reservaButton {
+  button {
+    width: 60%;
+  }
+}
