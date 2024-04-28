@@ -1,0 +1,27 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+:root {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  //background: url("../img/homeBackground.jpg") no-repeat center center/cover;
+}
+
+main {
+  margin: 5% auto;
+}
+
+#reservaButton {
+  button {
+    width: 60%;
+  }
+}
