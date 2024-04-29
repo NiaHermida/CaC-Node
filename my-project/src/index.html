@@ -10,21 +10,42 @@
   <body class="">
     <!-- Navbar -->
     <header>
-      <nav class="navbar navbar-expand-lg bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">Navbar</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            style="border-color: white"
-          >
-            <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
-          </button>
+      <nav
+        class="navbar navbar-expand-lg fixed-top d-flex justify-content-between py-0"
+      >
+        <!--Logo-->
+        <div class="Logo p-2">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./img/LogoNono.svg"
+              alt="Il Nono Italian Restaurant"
+              class="img-fluid"
+              style="width: auto; height: 40px"
+            />
+          </a>
+        </div>
+
+        <!--Navbar links-->
+        <div class="links p-2">
+          <!--Toggle button-->
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              style="border-color: white"
+            >
+              <span
+                class="navbar-toggler-icon"
+                style="filter: invert(1)"
+              ></span>
+            </button>
+          </div>
+
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
@@ -54,10 +75,10 @@
     <main>
       <!--- Home Section -->
       <section
-        class="container text-white d-flex align-items-center justify-content-center"
+        class="container text-black d-flex align-items-center justify-content-center p-2"
       >
         <div class="row justify-content-between">
-          <div class="col-md-6 d-flex row align-content-start">
+          <div class="col-md-6 d-flex row align-content-start p-5">
             <h1 class="text-center mt-5">Il Nono Italian Restaurant</h1>
             <div class="text-center mb-3">
               <i>"Sapore italiano, felicità garantita!" </i>
@@ -94,7 +115,7 @@
       <br />
 
       <!-- About Section -->
-      <section class="container text-white">
+      <section class="container text-black">
         <div class="row">
           <div class="col-md-6">
             <img

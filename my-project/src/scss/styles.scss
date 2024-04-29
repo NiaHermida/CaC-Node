@@ -12,16 +12,42 @@
 }
 
 body {
-  background-color: #222;
-  //background: url("../img/homeBackground.jpg") no-repeat center center/cover;
+  background-color: #F4F4F4;
+  background: url("./img/pattern_Bg.svg");
+  background-size: cover;
+  background-repeat: repeat;
 }
+
 
 main {
   margin: 5% auto;
+}
+
+header {
+
+  nav{
+    background-color: #F4F4F4;
+    border-top: 2px solid #343434;
+    border-bottom: 2px solid #343434;
+
+  }
+
+  .Logo {
+    width: 31%;
+    background-color: #009246;
+  }
+
+  .links {
+    width: 31%;
+    background-color: #CE2B37;
+  }
 }
 
 #reservaButton {
   button {
     width: 60%;
   }
+}
+
+@media screen and (max-width: 768px) {
 }
