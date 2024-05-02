@@ -45,7 +45,12 @@ header {
     font-size: 6em;
     font-weight: bold;
     color: #ed250e;
+    text-shadow: 1px 1px 1px #000;
   }
+}
+
+img {
+  filter: drop-shadow(2px 2px 2px #000);
 }
 
 #reservaButton {
