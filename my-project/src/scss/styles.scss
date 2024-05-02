@@ -1,9 +1,8 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 
-:root {
-  font-family: "Roboto", sans-serif;
-}
+//Kaushan Script
+@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Kaushan+Script&family=Pacifico&family=Poetsen+One&display=swap");
 
 * {
   margin: 0;
@@ -12,15 +11,10 @@
 }
 
 body {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   background: url("./img/background.png");
   background-size: 250%;
   background-repeat: repeat;
-
-}
-
-section{
-  //background-color: #F4F4F4;
 }
 
 main {
@@ -28,12 +22,10 @@ main {
 }
 
 header {
-
-  nav{
-    background-color: #F4F4F4;
+  nav {
+    background-color: #f4f4f4;
     border-top: 2px solid #343434;
     border-bottom: 2px solid #343434;
-
   }
 
   .Logo {
@@ -43,13 +35,23 @@ header {
 
   .links {
     width: 31%;
-    background-color: #CE2B37;
+    background-color: #ce2b37;
+  }
+}
+
+#textHomeContent {
+  h1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 6em;
+    font-weight: bold;
+    color: #ed250e;
   }
 }
 
 #reservaButton {
   button {
     width: 60%;
+    background: #5b9765;
   }
 }
 
