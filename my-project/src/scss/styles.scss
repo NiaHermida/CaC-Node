@@ -4,6 +4,8 @@
 //Kaushan Script
 @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Kaushan+Script&family=Pacifico&family=Poetsen+One&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Satisfy&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -21,9 +23,13 @@ main {
   margin: 5% auto;
 }
 
+img {
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
 header {
   nav {
-    background-color: #f4f4f4;
+    background-color: #fff;
     border-top: 2px solid #343434;
     border-bottom: 2px solid #343434;
   }
@@ -47,10 +53,18 @@ header {
     color: #ed250e;
     text-shadow: 1px 1px 1px #000;
   }
-}
 
-img {
-  filter: drop-shadow(2px 2px 2px #000);
+  span {
+    font-size: 2em;
+    color: #000;
+
+    padding: 1rem 3rem;
+    background-color: #fff;
+
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 #reservaButton {
