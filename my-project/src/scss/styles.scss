@@ -30,6 +30,7 @@ picture {
   img {
     width: 38rem;
     height: 38rem;
+    pointer-events: none;
   }
 }
 
@@ -208,7 +209,7 @@ footer {
 
   #reservaButton {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: 50%;
     transform: translateX(-48.5%);
 
@@ -222,5 +223,8 @@ footer {
 
   footer {
     opacity: 0;
+
+    //temp solution
+    pointer-events: none;
   }
 }
