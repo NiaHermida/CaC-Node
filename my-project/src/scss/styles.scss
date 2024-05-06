@@ -12,18 +12,25 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-color: #f4f4f4;
   background: url("./img/background.png");
   background-size: 250%;
   background-repeat: repeat;
-  
+
   overflow-x: hidden;
 }
 
 main {
   margin: 5% auto;
+}
+
+picture {
+
+  img {
+    width: 38rem;
+    height: 38rem;
+  }
 }
 
 header {
@@ -146,6 +153,9 @@ footer {
     font-weight: bold;
     color: #ed250e;
     text-shadow: 1px 1px 1px #000;
+
+    white-space: nowrap;
+    z-index: 1;
   }
 
   span {
@@ -156,7 +166,11 @@ footer {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+
+    white-space: nowrap;
+    z-index: 2;
   }
+  
 }
 
 #reservaButton {
@@ -168,37 +182,45 @@ footer {
 
 //mobile responsive
 @media (max-width: 768px) {
-
   main {
     margin: 15% auto;
+  }
+
+  section {
+    picture {
+      img {
+        padding-left: 3%;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   #textHomeContent {
     h1 {
       font-size: 4em;
     }
-  
+
     span {
       font-size: 1.3em;
     }
   }
 
-  #reservaButton{
+  #reservaButton {
     position: absolute;
     bottom: 0%;
     left: 50%;
-    transform: translateX(-50%);
-
+    transform: translateX(-48.5%);
 
     z-index: 5;
 
-    button{
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    button {
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+        rgb(209, 213, 219) 0px 0px 0px 1px inset;
     }
   }
 
-  footer{
+  footer {
     opacity: 0;
   }
 }
-
