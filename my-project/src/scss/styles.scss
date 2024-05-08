@@ -35,7 +35,6 @@ picture {
 
 header {
   nav {
-
     height: 7%;
 
     background-color: #fff;
@@ -48,9 +47,27 @@ header {
     }
 
     .links {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
       width: 31%;
       height: 100%;
       background-color: #ce2b37;
+
+      ul {
+      padding-right: 5%;
+
+        gap: 1rem;
+      }
+
+      a:hover {
+        border-bottom: 1px solid #fff;
+      }
+
+      .nav-item.active a {
+        border-bottom: 1px solid #fff;
+      }
     }
   }
 }
