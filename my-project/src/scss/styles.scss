@@ -36,8 +36,8 @@ picture {
 header {
   nav {
     background-color: #fff;
-    border-top: 2px solid #343434;
-    border-bottom: 2px solid #343434;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
   }
 
   .Logo {
@@ -77,6 +77,7 @@ header {
     justify-content: center;
     border-radius: 50%;
     border: 1px solid #000;
+    background-color: #FFFFFF;
   }
 
   .twitter:hover {
@@ -163,7 +164,7 @@ footer {
     font-family: "Kaushan Script", cursive;
     font-size: 6em;
     font-weight: bold;
-    color: #ed250e;
+    color: #F2293C;
     text-shadow: 1px 1px 1px #000;
 
     white-space: nowrap;
