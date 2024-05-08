@@ -35,18 +35,23 @@ picture {
 
 header {
   nav {
+
+    height: 7%;
+
     background-color: #fff;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  }
 
-  .Logo {
-    width: 31%;
-    background-color: #009246;
-  }
+    .Logo {
+      width: 31%;
+      height: 100%;
+      background-color: #009246;
+    }
 
-  .links {
-    width: 31%;
-    background-color: #ce2b37;
+    .links {
+      width: 31%;
+      height: 100%;
+      background-color: #ce2b37;
+    }
   }
 }
 
@@ -196,7 +201,7 @@ footer {
 //mobile responsive
 @media (max-width: 768px) {
   main {
-    margin: 15% auto;
+    margin: 13% auto;
   }
 
   section {
@@ -228,7 +233,7 @@ footer {
     bottom: -5%;
     left: 51.5%;
     transform: translateX(-50%);
-  
+
     button {
       box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
         rgb(209, 213, 219) 0px 0px 0px 1px inset;
