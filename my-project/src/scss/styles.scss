@@ -36,8 +36,7 @@ picture {
 header {
   nav {
     background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   }
 
   .Logo {
@@ -77,11 +76,11 @@ header {
     justify-content: center;
     border-radius: 50%;
     border: 1px solid #000;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   .twitter:hover {
-    background: linear-gradient(45deg,#4b5863, #15202B);
+    background: linear-gradient(45deg, #4b5863, #15202b);
 
     svg {
       fill: #fff;
@@ -164,7 +163,7 @@ footer {
     font-family: "Kaushan Script", cursive;
     font-size: 6em;
     font-weight: bold;
-    color: #F2293C;
+    color: #f2293c;
     text-shadow: 1px 1px 1px #000;
 
     white-space: nowrap;
@@ -186,6 +185,8 @@ footer {
 }
 
 #reservaButton {
+  position: relative;
+
   button {
     width: 60%;
     background: #5b9765;
@@ -199,6 +200,8 @@ footer {
   }
 
   section {
+    position: relative;
+
     picture {
       img {
         padding-left: 3%;
@@ -210,7 +213,7 @@ footer {
 
   #textHomeContent {
     h1 {
-      font-size: 4em;
+      font-size: 3em;
     }
 
     span {
@@ -220,16 +223,20 @@ footer {
 
   #reservaButton {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-48.5%);
+    z-index: 1;
 
-    z-index: 5;
-
+    bottom: -5%;
+    left: 51.5%;
+    transform: translateX(-50%);
+  
     button {
       box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
         rgb(209, 213, 219) 0px 0px 0px 1px inset;
     }
+  }
+
+  .socialIcons {
+    display: none;
   }
 
   footer {
