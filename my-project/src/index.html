@@ -30,15 +30,18 @@
 
         <!--Navbar links-->
         <div class="links p-2">
+
           <!--Collapable responsive-->
           <button
-            class="navbar-toggler border-0"
+            class="navbar-toggler border-0 btn btn-primary d-lg-none"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
-            aria-controls="navbarNav"
+            aria-controls="offcanvasResponsive"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasResponsive"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,26 +56,45 @@
             </svg>
           </button>
 
-          <!--links-->
+          <!--Offcanvas-->
           <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasResponsive"
+            aria-labelledby="offcanvasResponsiveLabel"
           >
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link text-white p-0" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white p-0" href="#">Menú</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white p-0" href="#">Reservas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white p-0" href="#">Contacto</a>
-              </li>
-            </ul>
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">
+                Il Nono "Di Manchia"
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!--Offcanvas bodyLinks-->
+            <div class="offcanvas-body">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link text-white p-0" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white p-0" href="#">Menú</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white p-0" href="#">Reservas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white p-0" href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
           </div>
+
+          
         </div>
       </nav>
     </header>

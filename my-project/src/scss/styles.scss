@@ -65,8 +65,10 @@ header {
         border-bottom: 1px solid #fff;
       }
 
-      .nav-item.active a {
-        border-bottom: 1px solid #fff;
+      #offcanvasResponsive {
+        display: flex;
+        align-items: end;
+        padding-right: 3%;
       }
     }
   }
