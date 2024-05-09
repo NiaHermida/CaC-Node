@@ -83,7 +83,7 @@ header {
 
 .socialIcons {
   position: fixed;
-  bottom: 3%;
+  bottom: 2.5%;
   right: 2%;
 
   z-index: 5;
@@ -266,27 +266,46 @@ footer {
     }
   }
 
+  #offcanvasResponsive {
+    height: 35%;
+  }
+
   .offcanvas-header {
     width: 100%;
     border-bottom: 1px solid #000;
+
+    h5 {
+      font-size: 1.4em;
+      font-style: italic;
+    }
   }
 
-  .socialIcons {
-    display: none;
+  .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      padding: 0 !important;
+      font-size: 1.2em;
+    }
+  }
+
+  .text-sm-black {
+    color: #000 !important;
   }
 
   footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     gap: 0.5rem;
 
     cite {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
   }
 }
