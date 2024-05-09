@@ -65,10 +65,17 @@ header {
         border-bottom: 1px solid #fff;
       }
 
-      #offcanvasResponsive {
+      button {
+        border-radius: 0px;
+
+        &:hover {
+          background-color: #fa3a47;
+        }
+      }
+
+      .offcanvas-body {
         display: flex;
-        align-items: end;
-        padding-right: 3%;
+        justify-content: flex-end;
       }
     }
   }
@@ -257,6 +264,11 @@ footer {
       box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
         rgb(209, 213, 219) 0px 0px 0px 1px inset;
     }
+  }
+
+  .offcanvas-header {
+    width: 100%;
+    border-bottom: 1px solid #000;
   }
 
   .socialIcons {
