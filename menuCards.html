@@ -16,11 +16,26 @@
   <body>
     <header class="Navbar"></header>
     <main class="Main">
-      <div class="CardGroup" id="mainCardGroup"></div>
-      <div class="CardGroup" id="dessertCardGroup"></div>
+      <div class="CardGroupContainer">
+        <div class="Collapsible" data-section="mainDishes">
+          <button class="CollapseButton">icon button to collapse main</button>
+          <div class="CardGroup__Dishes">
+            <div class="CardGroup" id="mainCardGroup"></div>
+          </div>
+        </div>
+        <div class="Collapsible" data-section="dessertDishes">
+          <button class="CollapseButton">
+            icon button to collapse dessert
+          </button>
+          <div class="CardGroup__Dishes">
+            <div class="CardGroup" id="dessertCardGroup"></div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="Footer"></footer>
     <script src="mainDishesData.constants.js"></script>
     <script src="dessertDishesData.constants.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

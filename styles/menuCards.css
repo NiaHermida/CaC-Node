@@ -84,6 +84,40 @@ body {
   white-space: normal;
 }
 
+.CardGroup__MainDishes {
+  background-color: green;
+}
+
+.CardGroup__DessertDishes {
+  background-color: yellow;
+}
+
+.Collapsible {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* .CollapseButton {
+  background-color: #f9f9f9;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+} */
+
+.CardGroup__Dishes {
+  display: none;
+  padding: 0 10px;
+}
+
+.Card__Container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  padding: 10px;
+}
+
 @media screen and (max-width: 612px) {
   .CardGroup {
     display: flex;
