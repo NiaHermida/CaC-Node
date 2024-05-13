@@ -16,22 +16,38 @@
   <body>
     <header class="Navbar"></header>
     <main class="Main">
-      <div class="CardGroupContainer">
         <div class="Collapsible" data-section="mainDishes">
-          <button class="CollapseButton">icon button to collapse main</button>
-          <div class="CardGroup__Dishes">
-            <div class="CardGroup" id="mainCardGroup"></div>
+          <div class="SectionHeader">
+            <p class="SectionHeader__Title">Platos Principales</p>
+            <button class="IconButton">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ExpandedIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CollapsedIcon">
+               <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+             </svg>
+            </button>
           </div>
+            <div class="CardGroup" id="mainCardGroup"></div>
         </div>
         <div class="Collapsible" data-section="dessertDishes">
-          <button class="CollapseButton">
-            icon button to collapse dessert
-          </button>
-          <div class="CardGroup__Dishes">
-            <div class="CardGroup" id="dessertCardGroup"></div>
+          <div class="SectionHeader">
+            <p class="SectionHeader__Title">Postres</p>
+            <button class="IconButton">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ExpandedIcon">
+               <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+             </svg>
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CollapsedIcon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+            
+           </button>
           </div>
+          </button>
+    
+            <div class="CardGroup" id="dessertCardGroup"></div>
+       
         </div>
-      </div>
     </main>
     <footer class="Footer"></footer>
     <script src="mainDishesData.constants.js"></script>
