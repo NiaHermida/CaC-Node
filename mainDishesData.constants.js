@@ -91,7 +91,7 @@ const MAINDISHES_DATA = [
   },
 ];
 
-const cardGroup = document.getElementById("cardGroup");
+const mainCardGroup = document.getElementById("mainCardGroup");
 
 MAINDISHES_DATA.forEach((card) => {
   const cardContainer = document.createElement("div");
@@ -131,5 +131,5 @@ MAINDISHES_DATA.forEach((card) => {
 
   cardContainer.appendChild(cardBody);
 
-  cardGroup.appendChild(cardContainer);
+  mainCardGroup.appendChild(cardContainer);
 });
