@@ -4,28 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = collapsible.querySelector(".IconButton");
     const content = collapsible.querySelector(".CardGroup");
 
-    content.classList.add("hidden");
-    button.classList.add("hidden");
-    toggleIcon(button);
+    toggleIcon(button, content.classList.contains("hidden"));
 
     button.addEventListener("click", function () {
       content.classList.toggle("hidden");
-      button.classList.toggle("hidden");
-      toggleIcon(button);
+      toggleIcon(button, content.classList.contains("hidden"));
     });
   });
 
-  function toggleIcon(button) {
+  function toggleIcon(button, isContentHidden) {
     const collapsedIcon = button.querySelector(".CollapsedIcon");
     const expandedIcon = button.querySelector(".ExpandedIcon");
 
-    collapsedIcon.classList.toggle(
-      "hidden",
-      !button.classList.contains("hidden")
-    );
-    expandedIcon.classList.toggle(
-      "hidden",
-      button.classList.contains("hidden")
-    );
+    collapsedIcon.classList.toggle("hidden", !isContentHidden);
+    expandedIcon.classList.toggle("hidden", isContentHidden);
   }
 });

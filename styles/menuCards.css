@@ -21,6 +21,14 @@ body {
   flex: 1;
 }
 
+.PageTitle {
+  font-family: "Kaushan Script", cursive;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .CardGroup {
   display: flex;
   justify-content: space-around;
@@ -66,7 +74,7 @@ body {
 .Card__Title {
   font-weight: bold;
   font-size: 20px;
-  padding: 7px 0;
+  margin-bottom: 4px;
 }
 
 /* TODO: add a leer más link */
@@ -79,11 +87,30 @@ body {
   white-space: normal;
 }
 
+.Card__Price {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  align-self: center;
+  margin-top: 2px;
+}
+
 .Collapsible {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 10px;
   margin: 20px;
   padding: 10px;
+}
+
+.SectionHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
+
+.SectionHeader__Title {
+  font-size: 2em;
+  font-family: "Kaushan Script", cursive;
 }
 
 .Collapsible .CardGroup.hidden,
@@ -92,25 +119,14 @@ body {
   display: none;
 }
 
-.SectionHeader__Title {
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-.ExpandedIcon,
-.CollapsedIcon {
-  height: 2em;
-}
-
 .IconButton {
   border: none;
   background-color: transparent;
 }
 
-.SectionHeader {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 20px;
+.ExpandedIcon,
+.CollapsedIcon {
+  height: 2em;
 }
 
 @media screen and (max-width: 612px) {
