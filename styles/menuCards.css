@@ -49,8 +49,8 @@ body {
 }
 
 .Card__Body:hover {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.3),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 2px 4px -1px rgba(219, 211, 211, 0.3),
+    0px 4px 5px 0px rgba(3, 3, 3, 0.34), 3px 1px 10px 0px rgba(10, 212, 44, 0.3);
 }
 
 .Card__Image__Wrapper {
