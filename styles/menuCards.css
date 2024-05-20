@@ -45,7 +45,7 @@ body {
   border-radius: 5px;
   font-family: "Cormorant Garamond", serif;
   width: 280px;
-  height: 500px;
+  height: 510px;
 }
 
 .Card__Body:hover {
@@ -55,7 +55,7 @@ body {
 
 .Card__Image__Wrapper {
   position: relative;
-  height: 70%;
+  height: 350px;
 }
 
 .Card__Image img {
@@ -85,16 +85,34 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+  margin-bottom: 5px;
 }
 
 .Card__Price {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: 5px;
   font-weight: bold;
   align-self: center;
-  margin-top: 2px;
-}
+  position: relative;
 
+  /* border-top: 2px solid gray; */
+}
+/* .Card__Price::before {
+  content: '';
+  position: absolute;
+  margin-bottom:15px;
+  left: 0;
+  right: 0;
+  height: 5px; /* Adjust based on desired thickness of the line */
+  /* background: linear-gradient(to right, red, white, green); */
+/* } 
+
+*/
+
+.Card__Flag {
+  height: 3px;
+  background: linear-gradient(to right, red, white, green); 
+}
 .Collapsible {
   border-bottom: 1px solid #ccc;
   border-radius: 10px;

@@ -138,17 +138,21 @@ MAINDISHES_DATA.forEach((card) => {
   description.classList.add("Card__Description");
   description.textContent = card.description;
 
+  const flag = document.createElement("div");
+  flag.classList.add("Card__Flag");
+
   const price = document.createElement("div");
   price.classList.add("Card__Price");
   price.textContent = card.price;
 
   content.appendChild(title);
   content.appendChild(description);
+  content.appendChild(flag);
   content.appendChild(price);
 
   cardBody.appendChild(imageWrapper);
   cardBody.appendChild(content);
-
+  
   cardContainer.appendChild(cardBody);
 
   mainCardGroup.appendChild(cardContainer);
