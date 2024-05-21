@@ -1,20 +1,311 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 
-:root {
-  font-family: "Roboto", sans-serif;
-}
+//Kaushan Script
+@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Kaushan+Script&family=Pacifico&family=Poetsen+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Satisfy&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
 }
 
 body {
-  min-height: 100vh;
+  background-color: #f4f4f4;
+  background: url("./img/background.png");
+  background-size: 250%;
+  background-repeat: repeat;
 
-  background: url("../img/homeBackground.jpg") no-repeat center center/cover;
+  overflow-x: hidden;
 }
 
+main {
+  margin: 5% auto;
+}
+
+picture {
+  img {
+    width: 38rem;
+    height: 38rem;
+    pointer-events: none;
+  }
+}
+
+header {
+  nav {
+    height: 7%;
+
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+    .Logo {
+      width: 31%;
+      height: 100%;
+      background-color: #009246;
+    }
+
+    .links {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      width: 31%;
+      height: 100%;
+      background-color: #ce2b37;
+
+      ul {
+        padding-right: 5%;
+
+        gap: 1rem;
+      }
+
+      a:hover {
+        border-bottom: 1px solid #fff;
+      }
+
+      button {
+        border-radius: 0px;
+
+        &:hover {
+          background-color: #fa3a47;
+        }
+      }
+
+      .offcanvas-body {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.socialIcons {
+  position: fixed;
+  bottom: 2.5%;
+  right: 2%;
+
+  z-index: 5;
+
+  .socials-container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: 1%;
+    gap: 1rem;
+  }
+
+  .social {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #ffffff;
+  }
+
+  .twitter:hover {
+    background: linear-gradient(45deg, #4b5863, #15202b);
+
+    svg {
+      fill: #fff;
+    }
+  }
+  .facebook:hover {
+    background: linear-gradient(45deg, #134ac0, #316ff6, #78a3ff);
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  .instagram:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+
+    svg {
+      fill: #fff;
+    }
+  }
+  .social svg {
+    fill: #888;
+    height: 1rem;
+  }
+}
+
+footer {
+  pointer-events: none;
+
+  cite {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #000;
+
+    pointer-events: all;
+
+    .groupNames {
+      padding-left: 1rem;
+      gap: 0.8rem;
+
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+  }
+}
+
+#textHomeContent {
+  h1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 6em;
+    font-weight: bold;
+    color: #f2293c;
+    text-shadow: 1px 1px 1px #000;
+
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  span {
+    font-size: 2em;
+    color: #000;
+
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+
+    white-space: nowrap;
+    z-index: 2;
+  }
+}
+
+#reservaButton {
+  position: relative;
+
+  button {
+    width: 60%;
+    background: #5b9765;
+  }
+}
+
+//mobile responsive
+@media (max-width: 768px) {
+  main {
+    margin: 13% auto;
+  }
+
+  section {
+    position: relative;
+
+    picture {
+      img {
+        padding-left: 3%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  #textHomeContent {
+    h1 {
+      font-size: 3em;
+    }
+
+    span {
+      font-size: 1.3em;
+    }
+  }
+
+  #reservaButton {
+    position: absolute;
+    z-index: 1;
+
+    bottom: -5%;
+    left: 51.5%;
+    transform: translateX(-50%);
+
+    button {
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+        rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    }
+  }
+
+  #offcanvasResponsive {
+    height: 35%;
+  }
+
+  .offcanvas-header {
+    width: 100%;
+    border-bottom: 1px solid #000;
+
+    h5 {
+      font-size: 1.4em;
+      font-style: italic;
+    }
+  }
+
+  .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      padding: 0 !important;
+      font-size: 1.2em;
+    }
+  }
+
+  .text-sm-black {
+    color: #000 !important;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 0.5rem;
+
+    cite {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
