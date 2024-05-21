@@ -14,7 +14,7 @@ const MAINDISHES_DATA = [
     price: "$8000",
   },
   {
-    title: "Gnocchi",
+    title: "Ñoquis",
     description:
       "Ñoquis de origen italiano, suaves y esponjosos, acompañados de una exquisita salsa de tomate casera y coronados con queso parmesano recién rallado. Una deliciosa experiencia gastronómica que deleitará tu paladar con cada bocado.",
     image: "./img/mainDishes/gnocchi.jpg",
@@ -84,7 +84,7 @@ const MAINDISHES_DATA = [
     price: "$11000",
   },
   {
-    title: "Ossobuco",
+    title: "Osobuco",
     description:
       "Jugoso y tierno jarrete de ternera cocido lentamente en una salsa rica de tomate, vino blanco, cebolla, zanahoria y hierbas aromáticas. Servido con una guarnición de risotto azafranado, este plato italiano es una experiencia gastronómica reconfortante que deleitará tu paladar con cada bocado.",
     image: "./img/mainDishes/ossobuco.jpg",
@@ -152,7 +152,7 @@ MAINDISHES_DATA.forEach((card) => {
 
   cardBody.appendChild(imageWrapper);
   cardBody.appendChild(content);
-  
+
   cardContainer.appendChild(cardBody);
 
   mainCardGroup.appendChild(cardContainer);
