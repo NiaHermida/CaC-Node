@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../scss/menuCards.scss" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/red.png" type="image/x-icon" />
+    <title>Menú</title>
+  </head>
+  <body>
+    <header class="Navbar"></header>
+    <main class="Main">
+      <div class="PageTitle">Nuestro Menú</div>
+        <div class="Collapsible" data-section="mainDishes">
+          <div class="SectionHeader">
+            <p class="SectionHeader__Title">Platos Principales</p>
+            <button class="IconButton">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ExpandedIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CollapsedIcon">
+               <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+             </svg>
+            </button> 
+          </div>
+            <div class="CardGroup" id="mainCardGroup"></div>
+        </div>
+        <div class="Collapsible" data-section="dessertDishes">
+          <div class="SectionHeader">
+            <p class="SectionHeader__Title">Postres</p>
+            <button class="IconButton">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ExpandedIcon">
+               <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+             </svg>
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CollapsedIcon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+           </button>
+          </div>
+          </button>
+            <div class="CardGroup" id="dessertCardGroup"></div>
+        </div>
+    </main>
+    <footer class="Footer"></footer>
+    <script src="mainDishesData.constants.js"></script>
+    <script src="dessertDishesData.constants.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
