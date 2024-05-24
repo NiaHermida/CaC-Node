@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/trebol.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Il Nono "Di Manchia"</title>
+  
+    <link rel="icon" href="../img/nonoLogo.svg" type="image/svg" />
+    <!--<link href="/CaC-Node/my-project/src/reserva/reserva.css" rel="stylesheet" type="text/css"/> -->
+    <script type="module" src="./reserva.js"></script>
+</head>
+<body>
+    <header  >
+        
+        <!--<button class="abrir-menu" id="abrir"><img id='imgmenu' src="img/Menu_icon_icon-icons.com_71858 verde.png" alt=""></button> -->
+        <nav class="navbar navbar-expand-lg fixed-top d-flex justify-content-between p-0" id="nav">
+         <!--Logo-->
+        <div class="Logo p-2">
+            <a class="navbar-brand" href="#">
+              <img
+                src="../img/LogoNono.svg"
+                alt="Il Nono Italian Restaurant"
+                class="img-fluid"
+                style="width: auto; height: 40px"
+              />
+            </a>
+          </div>
+         
+        <!--Navbar links-->
+        <div class="links p-2">
+
+            <!--Collapable responsive-->
+            <button
+              class="navbar-toggler border-0 btn btn-primary d-lg-none"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="offcanvasResponsive"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasResponsive"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1.5em"
+                height="1.5em"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="#fff"
+                  d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75m0 5A.75.75 0 0 1 2.75 9h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 9.75M2.75 14a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5z"
+                />
+              </svg>
+            </button>
+  
+            <!--Offcanvas NavBar-->
+            <div
+              class="offcanvas offcanvas-top"
+              tabindex="-1"
+              id="offcanvasResponsive"
+              aria-labelledby="offcanvas"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">
+                  Il Nono "Di Manchia"
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close text-reset"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+  
+              <!--Offcanvas bodyLinks-->
+              <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link text-white text-sm-black p-0" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-sm-black p-0" href="./menu/menuCards.html">Menú</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-sm-black p-0" href="./formreserva/reserva.html">Reservas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-sm-black p-0" href="#">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            
+          </div>
+        </nav>         
+         
+       
+    </header>
+
+
+
+    <main>
+        
+      
+        
+       <div id="formulario">
+        <form id="Contac_id">
+          <fieldset>
+            <legend> Datos del Pedido:</legend>
+            <br><br>
+            <label for="first-name">Nombre:</label>
+            <input type="text" id="first-name" required size ="10" maxlength="30" placeholder="Nombre...">
+            <br> <br>
+            <label for="last-name">Apellido:</label>
+            <input type="text" id="last-name" required size="10" maxlength="30" placeholder="Apellido...">
+            <br><br>
+            <label for="email">E-mail : </label>
+            <input type="email" id="email" required size="11" maxlength="30" placeholder="E-mail...">
+            <br><br>
+            <label for="dni">DNI:</label>
+            <input type="number" name="dni" id="dni" min="1000000" max="60000000">
+            <br><br>
+            <label for="fecnac">Fecha de reserva:</label>
+            <input type="date" name="fecnac" id="fecnac">
+                
+            <br>
+  
+            
+            
+        </fieldset>
+        <br>
+   
+        <br>
+       <div>
+        <label for="comentarios">Sugerencias:</label>
+        <br>
+        <textarea name="comentarios" id="comentarios" cols="30" rows="5"></textarea>
+        <br><br>
+        <input type="checkbox" name="cond"> Las reservas tienen validez hasta las 21 hs.
+        <br><br>
+        <div  id="reservaButton">
+          
+          <button class="btn mb-4 text-white" type="submit">Reservar</button>
+          <br>
+          <input class="btn mb-4 text-white" type="reset" value="Borrar">
+        </div>
+       
+       </div>
+        </form>
+        
+       </div>
+        <script src="reserva.js"></script>
+     
+    </main>
+
+ <!-- Footer -->
+ <footer
+ class="d-flex justify-content-between text-black text-center p-2 fixed-bottom small bg-white z-2"
+>
+ <cite class="d-flex justify-content-between">
+   &copy; 2024 Il Nono "Di Manchia" - Group 3
+   <div class="groupNames d-flex">
+     <a href="">Estefania</a>
+     <a href="">Juancho</a>
+     <a href="">Leo</a>
+     <a href="">Mauro</a>
+   </div>
+ </cite>
+</footer>
+   
+</body>
+
+</html>
