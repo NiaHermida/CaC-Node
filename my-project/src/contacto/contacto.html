@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto y Sucursales - Il Nono "Di Manchia"</title>
+  <link rel="stylesheet" href="../scss/contacto.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" href="../img/nonoLogo.svg" type="image/svg+xml" />
+  <script type="module" src="../js/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsVKR3gX3K8CvJDcdx8hFN7xd9qmbKek&callback=initMap"
+    async defer></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top d-flex justify-content-between p-0">
+      <div class="Logo p-2">
+        <a class="navbar-brand" href="#">
+          <img src="../img/LogoNono.svg" alt="Il Nono Italian Restaurant" class="img-fluid"
+            style="width: auto; height: 40px" />
+        </a>
+      </div>
+
+      <div class="links p-2">
+        <button class="navbar-toggler border-0 btn btn-primary d-lg-none" type="button" data-toggle="collapse"
+          data-target="#navbarNav" aria-controls="offcanvasResponsive" aria-expanded="false"
+          aria-label="Toggle navigation" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 20 20">
+            <path fill="#fff"
+              d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75m0 5A.75.75 0 0 1 2.75 9h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 9.75M2.75 14a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5z" />
+          </svg>
+        </button>
+
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvas">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Il Nono "Di Manchia"</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link text-white text-sm-black p-0" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-sm-black p-0" href="./menuCards.html">Menú</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-sm-black p-0" href="#">Reservas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-sm-black p-0" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección de Sucursales -->
+  <main>
+    <div class="container my-5">
+      <h2 class="text-center">Nuestras Sucursales</h2>
+      <div id="map" class="w-100" style="height: 500px;"></div>
+    </div>
+
+    <!-- Sección de Contacto -->
+    <div class="container my-5">
+      <h2 class="text-center">Contacto</h2>
+      <form id="form" class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="nombre">Nombre y Apellido<span>*</span></label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+            <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="empresa">Empresa (Opcional)</label>
+            <input type="text" class="form-control" id="empresa" name="empresa">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="email">Email<span>*</span></label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Por favor ingrese un email válido.</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="telefono">Celular<span>*</span></label>
+            <input type="text" class="form-control" id="telefono" name="telefono" required>
+            <div class="invalid-feedback">Por favor ingrese su teléfono.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="tipo">Tipo de Evento<span>*</span></label>
+            <select class="form-control" id="tipo" name="tipo" required>
+              <option value="0">Indique una opción</option>
+              <option value="Fin de Año">Fin de Año</option>
+              <option value="Aniversario">Aniversario</option>
+              <option value="Asamblea">Asamblea</option>
+              <option value="Congreso/Seminarios">Congreso/Seminarios</option>
+              <option value="Lanzamiento">Lanzamiento</option>
+              <option value="Conferencia">Conferencia</option>
+              <option value="Desayuno/Almuerzo/Cena">Desayuno/Almuerzo/Cena</option>
+              <option value="Reunión">Reunión</option>
+              <option value="15 Años">15 Años</option>
+              <option value="Bar Mitzvah">Bar Mitzvah</option>
+              <option value="Bat Mitzvah">Bat Mitzvah</option>
+              <option value="Cumpleaños">Cumpleaños</option>
+              <option value="Boda">Boda</option>
+              <option value="Recibida">Recibida</option>
+            </select>
+            <div class="invalid-feedback">Por favor seleccione un tipo de evento.</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="sucursal">Sucursal<span>*</span></label>
+            <select class="form-control" id="sucursal" name="sucursal" required>
+              <option value="0">Indique una opción</option>
+              <option value="Sucursal 1">Sucursal 1 - Calle Falsa 123, Ciudad 1, Provincia 1</option>
+              <option value="Sucursal 2">Sucursal 2 - Calle Falsa 456, Ciudad 2, Provincia 2</option>
+              <option value="Sucursal 3">Sucursal 3 - Calle Falsa 789, Ciudad 3, Provincia 3</option>
+              <option value="Sucursal 4">Sucursal 4 - Calle Falsa 101, Ciudad 4, Provincia 4</option>
+            </select>
+            <div class="invalid-feedback">Por favor seleccione una sucursal.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="fecha">Fecha<span>*</span></label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required>
+            <div class="invalid-feedback">Por favor ingrese una fecha.</div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="hora">Hora<span>*</span></label>
+            <input type="text" class="form-control" id="hora" name="hora" required>
+            <div class="invalid-feedback">Por favor ingrese una hora.</div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="personas">Cantidad de Personas<span>*</span></label>
+            <input type="text" class="form-control" id="personas" name="personas" required>
+            <div class="invalid-feedback">Por favor ingrese la cantidad de personas.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="consulta">Comentarios<span>*</span></label>
+          <textarea class="form-control" id="consulta" name="consulta" rows="5" required></textarea>
+          <div class="invalid-feedback">Por favor ingrese sus comentarios.</div>
+        </div>
+        <button class="btn btn-primary" type="submit">ENVIAR</button>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- Social media -->
+  <div class="socialIcons">
+    <div class="socials-container">
+      <a href="#" class="social twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+          <path
+            d="m214.75 211.71l-62.6-98.38l61.77-67.95a8 8 0 0 0-11.84-10.76l-58.84 64.72l-40.49-63.63A8 8 0 0 0 96 32H48a8 8 0 0 0-6.75 12.3l62.6 98.37l-61.77 68a8 1 0 0 10.76l58.84-64.72l40.49 63.63A8 8 0 0 0 160 224h48a8 8 0 0 0 6.75-12.29M164.39 208L62.57 48h29l101.86 160Z" />
+        </svg>
+      </a>
+      <a href="#" class="social facebook">
+        <svg viewBox="0 0 320 512">
+          <path
+            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+          </path>
+        </svg>
+      </a>
+      <a href="#" class="social instagram">
+        <svg viewBox="0 0 448 512">
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="d-flex justify-content-between text-black text-center p-2 fixed-bottom small bg-white z-2">
+    <cite class="d-flex justify-content-between">
+      &copy; 2024 Il Nono "Di Manchia" - Group 3
+      <div class="groupNames d-flex">
+        <a href="">Estefania</a>
+        <a href="">Juancho</a>
+        <a href="https://www.linkedin.com/in/leomotto/">Leo</a>
+        <a href="">Mauro</a>
+      </div>
+    </cite>
+  </footer>
+
+  <script src="./validacion.js"></script>
+  <script src="./mapaSucursales.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Bootstrap form validation
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        var forms = document.getElementsByClassName('needs-validation');
+        Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+</body>
+
+</html>
