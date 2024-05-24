@@ -1,3 +1,23 @@
+/* Estilos generales */
+body {
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Satisfy', cursive;
+}
+
+p {
+  font-family: 'Satisfy', cursive;
+}
+
+h2, h3, h4 {
+  font-family: 'Kaushan Script', cursive;
+}
+
+label {
+  font-family: 'Kaushan Script', cursive;
+}
+
 #main_sucursales {
   display: flex;
   flex-direction: column;
@@ -163,3 +183,6 @@ span {
 .was-validated .form-control:invalid ~ .invalid-tooltip {
   display: block;
 }
+
+
+

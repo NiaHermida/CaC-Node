@@ -64,10 +64,56 @@
 
   <!-- Sección de Sucursales -->
   <main>
-    <div class="container my-5">
-      <h2 class="text-center">Nuestras Sucursales</h2>
-      <div id="map" class="w-100" style="height: 500px;"></div>
-    </div>
+    <section id="mapaSucursales">
+      <div class="container my-5">
+        <h2 class="text-center">Nuestras Sucursales</h2>
+        <div id="map" class="w-100" style="height: 500px;"></div>
+      </div>
+    </section>
+    <section id="listaSucursales" class="container my-5">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Sucursal 1</h4>
+              <p class="card-text">Dirección: Calle Falsa 123, Ciudad 1, Provincia 1</p>
+              <p class="card-text">Teléfono: (123) 456-7890</p>
+              <!-- <p class="card-text">Email: sucursal1@example.com</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Sucursal 2</h4>
+              <p class="card-text">Dirección: Avenida Siempre Viva 742, Ciudad 2, Provincia 2</p>
+              <p class="card-text">Teléfono: (098) 765-4321</p>
+              <!-- <p class="card-text">Email: sucursal2@example.com</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Sucursal 3</h4>
+              <p class="card-text">Dirección: Calle Imaginaria 456, Ciudad 3, Provincia 3</p>
+              <p class="card-text">Teléfono: (555) 555-5555</p>
+              <!-- <p class="card-text">Email: sucursal3@example.com</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Sucursal 4</h4>
+              <p class="card-text">Dirección: Calle Falsa 101, Ciudad 4, Provincia 4</p>
+              <p class="card-text">Teléfono: (987) 654-3210</p>
+              <!-- <p class="card-text">Email: sucursal4@example.com</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Sección de Contacto -->
     <div class="container my-5">
@@ -77,7 +123,7 @@
           <div class="col-md-6 mb-3">
             <label for="nombre">Nombre y Apellido<span>*</span></label>
             <input type="text" class="form-control" id="nombre" name="nombre" required>
-            <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+            <div class="invalid-feedback">Ingrese su nombre y apellido</div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="empresa">Empresa (Opcional)</label>
@@ -86,21 +132,21 @@
         </div>
         <div class="form-row">
           <div class="col-md-6 mb-3">
-            <label for="email">Email<span>*</span></label>
+            <label for="email">Correo Electrónico<span>*</span></label>
             <input type="email" class="form-control" id="email" name="email" required>
-            <div class="invalid-feedback">Por favor ingrese un email válido.</div>
+            <div class="invalid-feedback">Ingrese un correo electrónico válido</div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="telefono">Celular<span>*</span></label>
-            <input type="text" class="form-control" id="telefono" name="telefono" required>
-            <div class="invalid-feedback">Por favor ingrese su teléfono.</div>
+            <label for="tel">Celular<span>*</span></label>
+            <input type="text" class="form-control" id="tel" name="tel" required>
+            <div class="invalid-feedback">Ingrese su número de celular</div>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-6 mb-3">
             <label for="tipo">Tipo de Evento<span>*</span></label>
             <select class="form-control" id="tipo" name="tipo" required>
-              <option value="0">Indique una opción</option>
+              <option value="default">Indique una opción</option>
               <option value="Fin de Año">Fin de Año</option>
               <option value="Aniversario">Aniversario</option>
               <option value="Asamblea">Asamblea</option>
@@ -121,7 +167,7 @@
           <div class="col-md-6 mb-3">
             <label for="sucursal">Sucursal<span>*</span></label>
             <select class="form-control" id="sucursal" name="sucursal" required>
-              <option value="0">Indique una opción</option>
+              <option value="default">Indique una opción</option>
               <option value="Sucursal 1">Sucursal 1 - Calle Falsa 123, Ciudad 1, Provincia 1</option>
               <option value="Sucursal 2">Sucursal 2 - Calle Falsa 456, Ciudad 2, Provincia 2</option>
               <option value="Sucursal 3">Sucursal 3 - Calle Falsa 789, Ciudad 3, Provincia 3</option>
@@ -131,17 +177,17 @@
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-6 mb-3">
             <label for="fecha">Fecha<span>*</span></label>
             <input type="date" class="form-control" id="fecha" name="fecha" required>
             <div class="invalid-feedback">Por favor ingrese una fecha.</div>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="hora">Hora<span>*</span></label>
-            <input type="text" class="form-control" id="hora" name="hora" required>
+          <div class="col-md-3 mb-3">
+            <label for="hora">Hora</label>
+            <input type="text" class="form-control" id="hora" name="hora">
             <div class="invalid-feedback">Por favor ingrese una hora.</div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-3 mb-3">
             <label for="personas">Cantidad de Personas<span>*</span></label>
             <input type="text" class="form-control" id="personas" name="personas" required>
             <div class="invalid-feedback">Por favor ingrese la cantidad de personas.</div>
@@ -149,13 +195,12 @@
         </div>
         <div class="form-group">
           <label for="consulta">Comentarios<span>*</span></label>
-          <textarea class="form-control" id="consulta" name="consulta" rows="5" required></textarea>
+          <textarea class="form-control" id="consulta" name="mensaje" rows="5" required></textarea>
           <div class="invalid-feedback">Por favor ingrese sus comentarios.</div>
         </div>
-        <button class="btn btn-primary" type="submit">ENVIAR</button>
+        <button class="btn btn-primary col-md-12" type="submit">ENVIAR</button>
       </form>
     </div>
-
   </main>
 
   <!-- Social media -->

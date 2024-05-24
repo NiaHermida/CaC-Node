@@ -2,22 +2,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form");
   const nombre = form.querySelector("input[name='nombre']");
   const correo = form.querySelector("input[name='email']");
-  const area = form.querySelector("select[name='area']");
-  const asunto = form.querySelector("input[name='asunto']");
+  const tel = form.querySelector("input[name='tel']");
+  const tipo = form.querySelector("select[name='tipo']");
+  const sucursal = form.querySelector("select[name='sucursal']");
+  const fecha = form.querySelector("input[name='fecha']");
+  const hora = form.querySelector("input[name='hora']");
+  const personas = form.querySelector("input[name='personas']");
   const mensaje = form.querySelector("textarea[name='mensaje']");
+
+  function validarFecha(fecha) {
+    const hoy = new Date().Hoy();
+    return fecha >= hoy;
+  }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
-    var validarEmail =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    var validarNombre = /^[A-Za-z\s]+$/;
-    var validarAsunto =
-      /^(?!.*[^A-Za-z0-9\s].*|[A-Za-z0-9\s].*[^A-Za-z0-9\s].*)[A-Za-z0-9\s!@#$%^&*()_+{}\[\]:;<>,.?~\\/]+$/;
+    const validarNombre = /^[A-Za-z\s]+$/;
+    const validarEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const validarTelefono = /^\d{10}$/;
+    const validarNumero = /^\d+$/;
 
     if (nombre.value == "" || !validarNombre.test(nombre.value)) {
       swal({
-        title: "Ingresá tu nombre o apodo",
+        title: "Ingrese su nombre y apellido",
         text: "Solo se permiten letras",
         icon: "warning",
         buttons: false,
@@ -29,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!validarEmail.test(correo.value)) {
       swal({
-        title: "Ingresá un correo electronico válido",
-        text: "Revisa el correo electronico ingresado",
+        title: "Ingrese un correo electrónico válido",
+        text: "Revise el correo electrónico ingresado",
         icon: "warning",
         buttons: false,
         timer: 2500,
@@ -39,31 +46,63 @@ document.addEventListener("DOMContentLoaded", function () {
       return false;
     }
 
-    if (area.value == "default") {
+    if (tel.value == "" || tel.value.length != 10 || !validarTelefono.test(tel.value)) {
       swal({
-        title: "Selecciona un area de interés",
-        text: "Debes seleccionar un area de la lista",
+        title: "Ingrese un número de contacto",
+        text: "El número de celular debe contener exactamente 10 dígitos",
         icon: "warning",
         buttons: false,
         timer: 2500,
       });
-      area.focus();
+      tel.focus();
       return false;
     }
 
-    if (
-      asunto.value.length == 0 ||
-      asunto.value.length > 35 ||
-      !validarAsunto.test(asunto.value)
-    ) {
+    if (tipo.value == "default") {
       swal({
-        title: "Revisa el asunto de tu mensaje",
-        text: "El asunto no puede estar vacío ni superar los 35 caracteres (solo se permiten letras y números)",
+        title: "Seleccione el tipo de evento",
+        text: "Debe seleccionar una opción de la lista",
         icon: "warning",
         buttons: false,
         timer: 2500,
       });
-      asunto.focus();
+      tipo.focus();
+      return false;
+    }
+
+    if (sucursal.value == "default") {
+      swal({
+        title: "Seleccione la sucursal",
+        text: "Debe seleccionar una opción de la lista",
+        icon: "warning",
+        buttons: false,
+        timer: 2500,
+      });
+      sucursal.focus();
+      return false;
+    }
+
+    if (!validarFecha(fecha.value)) {
+      swal({
+        title: "Ingrese una fecha válida",
+        text: "Debe seleccionar una fecha igual o posterior a hoy",
+        icon: "warning",
+        buttons: false,
+        timer: 2500,
+      });
+      fecha.focus();
+      return false;
+    }
+
+    if (!validarNumero.test(personas.value) || personas.value <= 0 || personas.value > 250) {
+      swal({
+        title: "Cantidad de personas inválida",
+        text: "El número de personas debe ser mayor a 0 y no superar 250",
+        icon: "warning",
+        buttons: false,
+        timer: 2500,
+      });
+      personas.focus();
       return false;
     }
 
@@ -92,9 +131,17 @@ document.addEventListener("DOMContentLoaded", function () {
           icon: "success",
           buttons: false,
           timer: 3000,
+        }).then(() => {
+          form.submit();
         });
-        form.submit();
       }
     });
   });
 });
+
+Date.prototype.Hoy = function () {
+  var local = new Date(this);
+  local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+  return local.toJSON().slice(0, 10);
+};
+document.getElementById("fecha").value = new Date().Hoy();
