@@ -1,8 +1,12 @@
-Run Local Server:
+# Navegar al Directorio del Proyecto
+cd ./my-project/
 
-  cd .\my-project\
-    npm i
-      npm start
+# Instalar las Dependencias
+npm install
 
-  ➜  Local:
-  http://localhost:3000/CaC-Node/
+# Iniciar el Servidor
+npm start
+
+# Acceder al Servidor Local
+# Abre tu navegador web y visita la siguiente URL:
+http://localhost:3000/CaC-Node/
