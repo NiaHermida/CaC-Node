@@ -8,5 +8,7 @@ export default {
   server: {
     port: 8080
   },
+  
+  
   base: '/CaC-Node/'
 }
