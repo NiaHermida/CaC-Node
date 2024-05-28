@@ -20,3 +20,35 @@ document.addEventListener("DOMContentLoaded", function () {
     expandedIcon.classList.toggle("hidden", isContentHidden);
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".Navbar__Items__ToggleButton");
+  const overlay = document.querySelector(".Overlay");
+  const overlayMenu = document.querySelector(".OverlayMenu");
+
+  menuToggle.addEventListener("click", function(event) {
+    event.stopPropagation(); 
+    overlay.classList.toggle("open");
+  });
+
+  overlay.addEventListener("click", function(event) {
+    if (event.target === overlay) {
+      overlay.classList.remove("open");
+    }
+  });
+
+  overlayMenu.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+
+  const overlayLinks = overlayMenu.querySelectorAll("a");
+  overlayLinks.forEach(function(link) {
+    link.addEventListener("click", function(event) {
+      event.stopPropagation(); 
+    });
+  });
+
+  document.addEventListener("click", function() {
+    overlay.classList.remove("open");
+  });
+});
