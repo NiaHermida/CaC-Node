@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-  background-image: url('../img/background.png');
+  background: url("../img/background.png");;
   background-size: cover;
   background-position: center;
   font-family: 'Satisfy', cursive;
@@ -184,5 +184,10 @@ span {
   display: block;
 }
 
-
+main {
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
+}
 
